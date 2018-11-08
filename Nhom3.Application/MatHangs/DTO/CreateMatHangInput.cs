@@ -10,7 +10,7 @@ namespace Nhom3.MatHangs.DTO
     {
         //public int MaMH { get; set; }
         public string TenMH { get; set; }
-        public DateTime CreationTime { get; set; }
+        //public DateTime CreationTime { get; set; }
         public int SL { get; set; }
     }
 }
