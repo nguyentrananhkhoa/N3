@@ -7,6 +7,8 @@ using Abp.Domain.Repositories;
 using Abp.Modules;
 using Nhom3.Authorization.Roles;
 using Nhom3.Authorization.Users;
+using Nhom3.MatHangs.DTO;
+using Nhom3.Models;
 using Nhom3.Roles.Dto;
 using Nhom3.Users.Dto;
 
@@ -17,6 +19,15 @@ namespace Nhom3
     {
         public override void PreInitialize()
         {
+            Configuration.Modules.AbpAutoMapper().Configurators.Add(mapper =>
+            {
+                #region Create
+                mapper.CreateMap<CreateMatHangInput, MatHang>().ReverseMap();
+                mapper.CreateMap<MatHang, GetMatHangOutput>().ReverseMap();
+                mapper.CreateMap<UpdateMatHangInput, MatHang>().ReverseMap();
+                mapper.CreateMap<MatHang, GetMatHangOutput>().ReverseMap();
+                #endregion
+            });
         }
 
         public override void Initialize()

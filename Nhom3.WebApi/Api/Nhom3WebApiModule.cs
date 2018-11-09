@@ -34,7 +34,7 @@ namespace Nhom3.Api
                 })
                 .EnableSwaggerUi(c =>
                 {
-                    c.InjectJavaScript(Assembly.GetAssembly(typeof(Nhom3WebApiModule)), "Nhom3.WebApi.Api.Scripts.Swagger-Custom.js");
+                    c.InjectJavaScript(Assembly.GetAssembly(typeof(Nhom3WebApiModule)), "Nhom3.Api.Scripts.Swagger-Custom.js");
                 });
         }
        }

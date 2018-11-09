@@ -21,9 +21,10 @@ namespace Nhom3.Models
             return _repositoryMatHang.GetAll();
         }
 
-        public MatHang GetMatHangById(int id)
+        public MatHang GetMatHangById(int MaMH)
         {
-            return _repositoryMatHang.Get(id);
+            //var maMH = _repositoryMatHang.FirstOrDefault(x => x.MaMH == id);
+            return _repositoryMatHang.Get(MaMH);
         }
 
         public async Task<MatHang> Create(MatHang enttity)
